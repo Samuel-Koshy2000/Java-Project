@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns:fx="http://javafx.com/fxml" fx:controller="org.example.proto.ProductController">
+
+  <HBox spacing="10">
+    <Label fx:id="capitalLabel" text="Capital: "/>
+    <Region prefWidth="50"/> <!-- Adjust width as needed for tab-like spacing -->
+    <Label fx:id="incomeLabel" text="Income: "/>
+    <Region prefWidth="50"/> <!-- Adjust width as needed for tab-like spacing -->
+    <Label fx:id="costLabel" text="Cost: "/>
+  </HBox>
+
+  <HBox spacing="10">
+    <TextField fx:id="nameField" promptText="Name"/>
+    <TextField fx:id="categoryField" promptText="Category"/>
+    <TextField fx:id="purchasePriceField" promptText="purchase price"/>
+    <TextField fx:id="sellPriceField" promptText="sell price"/>
+    <TextField fx:id="stockField" promptText="Stock"/>
+    <TextField fx:id="sizeField" promptText="size (clothes)"/>
+    <TextField fx:id="shoeSizeField" promptText="shoe size (shoes)"/>
+  </HBox>
+
+
+  <TableView fx:id="productTable">
+    <columns>
+      <TableColumn text="Name" fx:id="nameColumn"/>
+      <TableColumn text="Category" fx:id="categoryColumn"/>
+      <TableColumn text="Purchase_price" fx:id="purchasePriceColumn"/>
+      <TableColumn text="Sell_price" fx:id="sellPriceColumn"/>
+      <TableColumn text="Stock" fx:id="stockColumn"/>
+      <TableColumn text="discount" fx:id="discountColumn" />
+      <TableColumn text="size" fx:id="sizeColumn" />
+      <TableColumn text="shoe_size" fx:id="shoesizeColumn" />
+    </columns>
+  </TableView>
+
+  <HBox spacing="10">
+    <Button text="Add Product" onAction="#handleAddProduct"/>
+    <Button text="Update Product" onAction="#handleSaveUpdatedProduct"/>
+    <Button text="Delete Product" onAction="#handleDeleteProduct"/>
+    <Button text="Purchase Product" onAction="#handlePurchaseProduct"/>
+    <Button text="Sell Product" onAction="#handleSellProduct"/>
+    <Button text="Apply Discount" onAction="#handleApplyDiscount"/>
+    <Button text="Remove Discount" onAction="#handleRemoveDiscount"/>
+  </HBox>
+</VBox>
